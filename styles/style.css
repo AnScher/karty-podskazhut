@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: 'Raleway';
+  --accent-font: 'STIX Two Text';
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +15,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  font-family: var(--main-font);
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 p,
@@ -20,3 +31,110 @@ li,
 figure {
   margin: 0;
 }
+
+/* Header */
+
+.header {
+  padding-top: 10%;
+}
+
+.heading {
+  text-align: center;
+  font-family: var(--accent-font);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 27px */
+}
+
+.header__title {  
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-bottom: 40px;
+}
+
+/* Main */
+
+.content-section {
+  padding: 0 5vw;
+}
+
+.content__title {
+  font-size: 30px;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
+}
+
+.content .content__text-block:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.content__paragraph {
+  color: #312A4E;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content__link {
+  color: currentColor;
+}
+
+.content__blockquote {
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 1.5em; 
+  font-style: italic;
+  line-height: 200%; /* 36px */ 
+}
+
+.content__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item::before {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background-image: url(/images/marker-light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -25px;
+  top: 2px;
+}
+
+.content__text-block_type_first-lettered .content__paragraph:first-letter {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #312A4E;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 9px;
+  padding: 0 4px;
+  margin: 1px;
+}
+
+.content__figure {
+  position: relative;
+  width: calc(100% + 144px);
+  left: -72px;
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__picture-caption {
+  padding: 20px 0;
+  border-bottom: 1px solid #312A4E;
+  text-align: center;
+}
+/* Footer */
