@@ -55,12 +55,20 @@ button:disabled {
 /* Header */
 
 .header {
-  padding-top: 10%;
+  padding-block-start: 10%;
+}
+
+.header__logo {
+  inline-size: 135px;
+}
+
+.header-logo svg {
+  inline-size: 100%;
 }
 
 .heading {
   text-align: center;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, serif);
   font-style: normal;
   font-weight: 600;
   line-height: 90%; /* 27px */
@@ -68,7 +76,7 @@ button:disabled {
 
 .header__title {  
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
-  margin-bottom: 40px;
+  margin-block-end: 40px;
 }
 
 .header__menu {
