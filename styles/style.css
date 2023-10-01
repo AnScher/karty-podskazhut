@@ -1,3 +1,5 @@
+/* Global */
+
 :root {
   --bg-color: #F3EFEC;
   --text-color: #312A4E;
@@ -70,6 +72,10 @@ button:focus-visible {
 
 button:disabled {
   pointer-events: none;
+}
+
+.content-section {
+  padding: 0 5vi;
 }
 
 /* Header */
@@ -148,11 +154,8 @@ button:disabled {
 .theme_dark .header__theme-button_is-active::after {
   background-image: url(../images/pattern.svg);
 }
-/* Main */
 
-.content-section {
-  padding: 0 5vi;
-}
+/* Main */
 
 .content__title {
   font-size: 30px;
@@ -180,6 +183,8 @@ button:disabled {
   margin: 0 auto 1.5em;
   font-style: italic;
   line-height: 200%; /* 36px */ 
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .content__list {
@@ -264,6 +269,7 @@ button:disabled {
 }
 
 /* Footer */
+
 .footer {
   margin-block-start: 10%;
   border-block-start: 1px solid currentColor;
